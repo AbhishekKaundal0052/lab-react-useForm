@@ -3,16 +3,11 @@ import { useForm } from "react-hook-form";
 import "./App.css";
 
 function App() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, formState: { errors },} = useForm();
   const [submit, setSubmit] = useState(false);
-  const [field, setField] = useState();
 
   const doneSubmit = (data) => {
-    setField(data);
+    console.log(data);
     setSubmit(true);
   };
   return (
